@@ -2,8 +2,59 @@
   padding: 0;
   margin: 0;
 }
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 40rem;
+  margin: auto;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  width: 39rem;
+}
+
+.memes-item {
+  width: 100%;
+}
+
+.meme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.meme-input {
+  appearance: none;
+  display: none;
+}
+
+.meme-icon img {
+  width: 1rem;
+}
 
 .image {
   width: 20%;
+  height: 0;
+  transition: all 0.3s;
+}
+.content {
   height: auto;
 }
+
+.memes-item:has(.meme-input:checked) .content .image {
+  height: 10rem;
+  width: 10rem;
+}
+/* 
+.memes-item:hover .content .image {
+  height: 10rem;
+  width: 10rem;
+} */
