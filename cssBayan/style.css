@@ -141,3 +141,8 @@ body {
     font-size: 40%;
   }
 }
+@media (min-width: 1921px) {
+  html {
+    font-size: 120%;
+  }
+}
