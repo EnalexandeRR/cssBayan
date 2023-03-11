@@ -25,6 +25,10 @@ label {
   align-items: center;
 }
 
+.memes-item label:active .content .meme-image {
+  opacity: 0.7;
+}
+
 .meme-label:hover {
   cursor: pointer;
 }
