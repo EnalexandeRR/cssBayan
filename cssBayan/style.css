@@ -13,6 +13,22 @@ body {
   margin: auto;
 }
 
+input {
+  display: none;
+  visibility: hidden;
+}
+
+label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meme-label:hover {
+  cursor: pointer;
+}
+
 .main-header {
   font-size: 3rem;
   margin: 2rem 0;
@@ -28,44 +44,9 @@ body {
   align-items: center;
   margin: 0 2rem;
 }
-.accordion a {
-  display: block;
-  width: 100%;
-  color: inherit;
-  text-decoration: none;
-}
-
 .accordion:hover {
   color: black;
 }
-
-.memes-item {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top: 0.2rem solid rgba(0, 0, 0, 0.3);
-}
-
-.memes-item:target {
-  color: black;
-}
-
-.memes-item:target .content .image {
-  height: 24rem;
-  width: 24rem;
-  opacity: 1;
-}
-
-.memes-item:target .content {
-  height: 25rem;
-  width: 25rem;
-}
-.memes-item:target .meme-header .meme-icon img {
-  transform: rotate(-45deg);
-}
-
 .accordion:hover .meme-header .meme-icon {
   visibility: visible;
 }
@@ -75,41 +56,68 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
 }
 
-.memes-item:hover .meme-header .meme-icon img {
+.memes-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.3);
+}
+input:checked + .meme-label {
+  color: black;
+}
+
+input:checked + label .content .meme-image {
+  height: 24rem;
+  width: 24rem;
+  opacity: 1;
+}
+
+input:checked + label .content {
+  height: 25rem;
+  width: 25rem;
+}
+input:checked + label .meme-header .meme-icon {
   transform: rotate(-45deg);
 }
 
-.meme-input {
-  appearance: none;
-  display: none;
+.meme-label:hover .content .meme-image {
+  height: 24rem;
+  width: 24rem;
+  opacity: 1;
+}
+
+.meme-label:hover .content {
+  height: 25rem;
+  width: 25rem;
+}
+
+.meme-label:hover .meme-header .meme-icon {
+  transform: rotate(-45deg);
 }
 
 .meme-icon {
   width: 1.5rem;
   visibility: hidden;
+  transition: transform 0.3s;
 }
 
-.meme-icon img {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s;
+.meme-image {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .content {
   height: 0;
-  width: 100%;
+  width: 0;
   display: flex;
   justify-content: center;
-  transition: all 0.3s;
-}
-
-.image {
-  width: 0;
-  height: 0;
-  opacity: 0;
   transition: all 0.3s;
 }
 
