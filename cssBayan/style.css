@@ -8,15 +8,16 @@ html {
 }
 
 body {
-  max-width: 40rem;
+  font-size: 2rem;
+  max-width: 80rem;
   margin: auto;
 }
 
 .accordion-header {
-  font-size: 2rem;
-  margin: 1rem 0;
+  font-size: 3rem;
+  margin: 2rem 0;
   align-self: flex-start;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .accordion {
@@ -25,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .accordion:hover {
@@ -83,12 +84,12 @@ body {
 }
 
 .memes-item:has(.meme-input:checked) .content .image {
-  height: 15rem;
-  width: 15rem;
+  height: 30rem;
+  width: 30rem;
 }
 .memes-item:has(.meme-input:checked) .content {
-  height: 17rem;
-  width: 17rem;
+  height: 32rem;
+  width: 32rem;
 }
 .memes-item:has(.meme-input:checked) {
   color: black;
