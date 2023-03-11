@@ -53,6 +53,18 @@ body {
   align-items: center;
   padding: 0.5rem 1rem;
 }
+.memes-item:hover > .content .image {
+  height: 30rem;
+  width: 30rem;
+}
+.memes-item:hover > .content {
+  height: 32rem;
+  width: 32rem;
+}
+
+.memes-item:hover .meme-header .meme-icon img {
+  transform: rotate(-45deg);
+}
 
 .meme-input {
   appearance: none;
@@ -97,6 +109,7 @@ body {
 .memes-item:has(.meme-input:checked) .meme-header .meme-icon img {
   transform: rotate(-45deg);
 }
+
 /* 
 .memes-item:hover .content .image {
   height: 10rem;
