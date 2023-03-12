@@ -29,6 +29,14 @@ label {
   opacity: 0.7;
 }
 
+.memes-item label:active .meme-header {
+  color: #3998ff;
+}
+
+.memes-item label:active .meme-header .meme-icon {
+  background-image: url("./assets/icons/plus_blue.png");
+}
+
 .meme-label:hover {
   cursor: pointer;
 }
@@ -41,7 +49,7 @@ label {
 }
 
 .accordion {
-  color: blue;
+  color: rgb(31, 36, 166);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,8 +114,11 @@ input:checked + label .meme-header .meme-icon {
 
 .meme-icon {
   width: 1.5rem;
+  height: 1.5rem;
   visibility: hidden;
   transition: transform 0.3s;
+  background-image: url("./assets/icons/plus_black.png");
+  background-size: cover;
 }
 
 .meme-image {
