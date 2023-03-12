@@ -154,7 +154,7 @@ input:checked + label .meme-header .meme-icon {
   }
 }
 
-@media (min-width: 821px) {
+@media (min-width: 820px) {
   html {
     font-size: 62.5%;
   }
@@ -164,7 +164,7 @@ input:checked + label .meme-header .meme-icon {
     font-size: 40%;
   }
 }
-@media (min-width: 1921px) {
+@media (min-width: 1920px) {
   html {
     font-size: 120%;
   }
